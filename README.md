@@ -63,7 +63,7 @@ take a deeper dive into LiaScript. You can also contact us via email or start a 
 
                                {{2}}
 * __Project-Website:__ https://LiaScript.github.io
-* __OpenSource:__ https://github.com/liascript
+* __Open-Source:__ https://github.com/liascript
 * __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
 * __Additional resources:__
 
@@ -73,12 +73,19 @@ take a deeper dive into LiaScript. You can also contact us via email or start a 
   - Talks & ...: https://github.com/LiaPlayground
   - Blog: https://aizac.herokuapp.com
 
+* __Editor:__ https://atom.io
+
+  - Liascript-Preview: https://atom.io/packages/liascript-preview
+  - Liascript-Snippets: https://atom.io/packages/liascript-snippets
+
+* __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
+
 ## About LiaScript
 
                              --{{0}}--
 The development on LiaScript started as a side-project within the
 ["Industrial eLab"](http://www.elab.ovgu.de/Das+Projekt.html) project in
-Magdeburg. You can check out the follwoing video resource, which shows an
+Magdeburg. You can check out the following video resource, which shows an
 earlier version of the system as well as an historical outline.
 
 !?[Open Course Development with Liascript](https://www.youtube.com/watch?v=w_CRABsJNKA)
@@ -86,7 +93,7 @@ earlier version of the system as well as an historical outline.
 
                              --{{1}}--
 We needed a way of providing educational content for programming courses and
-thought that a language-based approach instead of a tooling- or plattform-based
+thought that a language-based approach instead of a tooling- or platform-based
 might provide a higher degree of freedom, exchangeability, and sustainability,
 next to some other benefits.
 
@@ -121,14 +128,14 @@ text-to-speech output.
                              --{{0}}--
 In order to flatten the learning curve and to not reinvent the wheel, we decided
 to rely on Markdown. But, we also wanted to have an extendable language with
-support for interactivity and beyond the possibilities of todays Learning
+support for interactivity and beyond the possibilities of today's Learning
 Management Systems.
 
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/HEURGne9Vj856oivkD" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/shecodesio-swipe-up-computer-congratulations-HEURGne9Vj856oivkD">via GIPHY</a></p>
 
                              --{{1}}--
-Within the follwoing section, we will shortly introduce the basic Markdown
-syntax and then some our extensions or reinterpretations.
+Within the following section, we will shortly introduce the basic Markdown
+syntax and then some of our extensions or reinterpretations.
 
 
 ### 1. Markdown basics
@@ -140,6 +147,7 @@ these headings are also used as separators between different "slides".
 
 
                               {{1-2}}
+<!-- class="translate"-->
 ``` markdown
 # Heading 1
 ## Heading 2
@@ -158,6 +166,7 @@ makes no difference if you use only one or multiple empty lines.
                               {{2-3}}
 ********************************************************************************
 
+<!-- class="translate"-->
 ``` markdown
 A text block that consists of multiple lines,
 is a simple paragraph.
@@ -179,12 +188,13 @@ different paragraphs or other Markdown blocks.
                              --{{3}}--
 How would you create an ordered or unordered list only by using a typewriter?
 Probably in a similar way. You can mix different lists with different Markdown
-blocks. The only thing that is important in this case is to use a propper
+blocks. The only thing that is important in this case is to use a proper
 indentation.
 
                               {{3-4}}
 ********************************************************************************
 
+<!-- class="translate"-->
 ``` markdown
 * unordered list
 * with an additional
@@ -215,6 +225,8 @@ with asterisks, tildes or underscores or other characters.
 
                               {{4-5}}
 ********************************************************************************
+
+<!-- class="translate"-->
 ``` markdown
 - *italic* ... _also italic_
 - **bold** ... __also bold__
@@ -249,6 +261,7 @@ corner of every column header.
                               {{5-6}}
 ********************************************************************************
 
+<!-- class="translate"-->
 ``` markdown
 | Tables               |      Are      |  Cool |
 | -------------------- |:-------------:| -----:|
@@ -273,6 +286,7 @@ Quoting important phrases was inspired by emails.
                               {{6-7}}
 ********************************************************************************
 
+<!-- class="translate"-->
 ``` markdown
 > A block-quote with something important that was said long
 > time ago ...
@@ -291,8 +305,8 @@ Quoting important phrases was inspired by emails.
 
 
                              --{{7}}--
-Last but not least, a peace of code, where syntax-highlighting should be
-applied, has only be surrounded by at least three backtics with an language
+Last but not least, a piece of code, where syntax-highlighting should be
+applied, has only to be surrounded by at least three backticks with a language
 indicator at the top.
 
                               {{7-8}}
@@ -332,7 +346,7 @@ int main() {
                              --{{0}}--
 There are actually four types of references in Markdown, you can either directly
 place a link everywhere within your documents. Most parsers are pretty smart and
-will recognize this, but this can become quite ugly for long urls. Hence, you
+will recognize this, but this can become quite ugly for long URLs. Hence, you
 can add named links via combination of brackets and parenthesis. The same can be
 used to reference parts within the document and if you want to include an image,
 this link has to be marked with a starting exclamation mark.
@@ -362,14 +376,14 @@ this link has to be marked with a starting exclamation mark.
 
    ![Netherlandish Proverbs](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg/2560px-Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg "Pieter Brueghel the Elder - The Dutch Proverbs")
 
-                             --{{2}}--
-LiaScript is smart enough to scale your the image propperly, furthermore it is
+                             --{{1}}--
+LiaScript is smart enough to scale your the image properly, furthermore it is
 possible to click onto the image in order to enlarge it and inspect the details.
 
 ### 3. Extensions
 
                              --{{0}}--
-By now you should have a basic understanding of Markdown. Within the next part
+By now, you should have a basic understanding of Markdown. Within the next part
 we will go briefly through some of our extensions and reinterpretations that can
 be used to create interactive learning experiences.
 
@@ -381,9 +395,10 @@ be used to create interactive learning experiences.
 Everything that is related to animations, is associated to braces. Double braces
 at the beginning of a block indicate the point in time when something should
 appear or disappear. Braces surrounded by dashes can be interpreted as the
-explanaition for a specific point. Thats it, if you change the representation of
+explanation for a specific point. That's it, if you change the representation of
 the course, these elements will be treated differently.
 
+<!-- class="translate"-->
 ``` markdown
        --{{1}}--
 See this important table.
@@ -397,7 +412,7 @@ See this important table.
               {{2}}
 * I will remain till the end
 * and do have some {3}{__inline animations__}
-* inline effects can also {3-4}{dissapear} ...
+* inline effects can also {3-4}{disappear} ...
 
         --{{2}}--
 The bullet point list is also quite important, it contains some sub effects
@@ -420,7 +435,7 @@ See this important table.
               {{2}}
 * I will remain till the end
 * and do have some {3}{__inline animations__}
-* inline effects can also {3-4}{dissapear} ...
+* inline effects can also {3-4}{disappear} ...
 
         --{{2}}--
 The bullet point list is also quite important, it contains some sub effects
@@ -431,9 +446,9 @@ The bullet point list is also quite important, it contains some sub effects
 разметке текста в электронных письмах...
 
                              --{{4}}--
-If you try out the experimental google translation, you will find out that
+If you try out the experimental Google translation, you will find out that
 everything gets translated and also the voice will change, except for the
-russian text, this will remain.
+Russian text, this will remain.
 
 
 #### B. Movies and XXX
@@ -452,7 +467,7 @@ identify an image, then maybe a question mark can be used for audio files.
 
 
                              --{{2}}--
-And if you combine an image with audio, then this can be used as an marker for
+And if you combine an image with audio, then this can be used as a marker for
 videos.
 
                               {{2-4}}
@@ -461,7 +476,7 @@ videos.
 ```
 
                              --{{3}}--
-The follwoing example shows, how you can create an educational website in three
+The following example shows, how you can create an educational website in three
 hours, content creation not included.
 
                               {{3-4}}
@@ -477,20 +492,20 @@ as an iframe.
 ********************************************************************************
 
 ``` markdown
-??[anotomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
+??[anatomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
 ```
 
-??[anotomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
+??[anatomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
 
 ********************************************************************************
 
 #### C. Coding
 
                              --{{0}}--
-The script-tag is an native element in LiaScript. It can be either used
+The script-tag is a native element in LiaScript. It can be either used
 stand-alone or in combination with other elements. If you attach a script-tag to
-an Markdown code-block, then this tells the LiaScript inpterpeter that this is
-an editable and executable piece of code. The script-tag in this case is used to
+a Markdown code-block, then this tells the LiaScript interpreter that this is an
+editable and executable piece of code. The script-tag in this case is used to
 tell LiaScript how to deal with the code. If it is JavaScript, then directly
 interpret the input code.
 
@@ -507,7 +522,7 @@ console.warn("Global climate change is a serious threat!!!")
 ````
 
                              --{{1}}--
-You can execute and modify this peace of code directly. Every change creates a
+You can execute and modify this piece of code directly. Every change creates a
 new version and you as a user can go back and forth.
 
 
@@ -524,10 +539,9 @@ console.warn("Global climate change is a serious threat!!!")
 
                              --{{2}}--
 But such script-tags can contain also more elaborate code, which you don't want
-want to copy an paste again and again. LiaScript therefore offers the
-opportunity to create macros, which can be parameterized and imported from other
-courses, Just like an ordinary library as it done in other programming
-languages.
+to copy and paste again and again. LiaScript therefore offers the opportunity to
+create macros, which can be parameterized and imported from other courses, Just
+like an ordinary library as it done in other programming languages.
 
 
                                {{2}}
@@ -608,7 +622,7 @@ Only a quick side-note. Tables in most cases also contain some form of
 structured data that begs for being visualized.
 
                              --{{1}}--
-Thus, if you see the follwoing table, how would you visualize it?
+Thus, if you see the following table, how would you visualize it?
 
 
                               {{1-3}}
@@ -643,7 +657,7 @@ data-ylabel="% of GDP"
 ```
 
                              --{{2}}--
-Probably also as a line-chart and this is what LiaScript does as well. It tries
+Probably also as a line-chart, and this is what LiaScript does as well. It tries
 to find patterns for the most appropriate visualization.
 
                               {{2-3}}
@@ -677,8 +691,8 @@ data-ylabel="% of GDP"
 
 
                              --{{3}}--
-The follwoing table might look like an bar-chart, since the first column does
-not contain any numbers. But instead this could be identified as categories.
+The following table might look like a bar-chart, since the first column does not
+contain any numbers. But instead, this could be identified as categories.
 
 
                               {{3-5}}
@@ -708,7 +722,7 @@ filter it.
 
 
                              --{{5}}--
-A table with only one line might be interpreted as an pie-chart. But, it is also
+A table with only one line might be interpreted as a pie-chart. But, it is also
 possible to combine this with animations, as we had seen it earlier.
 
                                {{5}}
@@ -729,13 +743,84 @@ Thus, if you change to the visualization, the changes might become more obvious.
 
 #### E. Quizzes?
 
-##### A Textquiz
+                             --{{0}}--
+Quizzes in LiaScript, as we hope, are self-explanatory and are always associated
+with brackets or brackets in combination with parenthesis.
 
-What did the **fish** say when he hit a **concrete wall**?
+                             --{{1}}--
+A simple text-input would then look like this, a question with a dedicated input.
 
-    [[dam]]
+                              {{1-2}}
+********************************************************************************
 
-##### Multiple Choice
+<!-- class="translate"-->
+``` markdown
+What's the name of the Markdown-dialect that
+was developed to create educational content?
+
+    [[LiaScript]]
+```
+
+---
+
+What's the name of the Markdown-dialect that
+was developed to create educational content?
+
+    [[LiaScript]]
+
+********************************************************************************
+
+
+                             --{{2}}--
+The critical reader will notice, that different spellings of `LiaScript` are not
+allowed. The input has to exactly match the input field. However, just by
+applying a simple script-tag, as we have seen it previously in section
+[Coding](#c.-coding), will do this job for us. Such scripts can be attached to
+all quizzes.
+
+                              {{2-3}}
+********************************************************************************
+
+<!-- class="translate"-->
+``` markdown
+What's the name of the Markdown-dialect that
+was developed to create educational content?
+
+    [[LiaScript]]
+    <script>
+        "liascript" === "@input".trim().toLowerCase()
+    </script>
+```
+
+---
+
+What's the name of the Markdown-dialect that
+was developed to create educational content?
+
+    [[LiaScript]]
+    <script>
+        "liascript" === "@input".trim().toLowerCase()
+    </script>
+
+********************************************************************************
+
+                             --{{3}}--
+Similarly, you can also define multiple-choice quizzes, only with the power of
+your keyboard. No further configuration is required.
+
+                              {{3-4}}
+********************************************************************************
+
+<!-- class="translate"-->
+``` markdown
+Just add as many points as you wish:
+
+    [[X]] Only the **X** marks the correct point.
+    [[ ]] Empty ones are wrong.
+    [[X]] ...
+```
+
+---
 
 Just add as many points as you wish:
 
@@ -743,17 +828,65 @@ Just add as many points as you wish:
     [[ ]] Empty ones are wrong.
     [[X]] ...
 
-##### Single Choice
+********************************************************************************
+
+
+                             --{{4}}--
+A single-choice quiz is simply the imitation of radio-buttons with parenthesis.
+If you solve the following quiz, you can play as much Prince of Persia as you
+want.
+
+
+                               {{4}}
+********************************************************************************
+
+<!-- class="translate"-->
+``` markdown
+Just add as many points as you wish:
+
+    [( )] ...
+    [(X)] <-- Only the **X** is allowed.
+    [( )] ...
+*************************************************
+
+??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
+
+*************************************************
+```
+
+---
 
 Just add as many points as you wish:
 
     [( )] ...
     [(X)] <-- Only the **X** is allowed.
     [( )] ...
+*************************************************
+
+??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
+
+*************************************************
+
+********************************************************************************
+
+
+                             --{{5}}--
+You can also combine single-choice and multiple-choice quizzes to create even
+more complex tests, but that it for the moment. We will go on by presenting a
+typical workflow of how courses are developed and used in Freiberg.
 
 
 ## A typical workflow
 
+Vielleicht kann man hier noch mit einem ASCII-Art Sequenz Diagramm arbeiten ...
+
+```````````````
+ ----+-----
+     |
+     |
+
+
+```````````````
 
 ## Publishing via ...
 
@@ -766,3 +899,6 @@ Just add as many points as you wish:
 ### Beaker
 
 ### ...
+
+
+## Tasks
