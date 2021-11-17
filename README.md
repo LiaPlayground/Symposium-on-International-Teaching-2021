@@ -365,6 +365,7 @@ Thus, if you see the following table, how would you visualize it?
 data-title="Government expenditure on education"
 data-xlabel="year"
 data-ylabel="% of GDP"
+data-show="true"
 -->
 | Year | Finland |     USA | Germany |   China |
 | ---- | -------:| -------:| -------:| -------:|
@@ -387,6 +388,7 @@ to find patterns for the most appropriate visualization.
 data-title="Government expenditure on education"
 data-xlabel="year"
 data-ylabel="% of GDP"
+data-show="true"
 -->
 | Year | Finland |     USA | Germany |   China |
 | ---- | -------:| -------:| -------:| -------:|
