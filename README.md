@@ -13,10 +13,53 @@ comment:  Try to write a short comment about
           your course, multiline is also okay.
 
 import:   https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
+          https://liascript.github.io/course/?https://github.com/liascript/CodeRunner
+
+script:
+          https://jauhl.github.io/mecEdit/scripts/g2.js
+          https://jauhl.github.io/mecEdit/scripts/mec2.min.js
+          https://jauhl.github.io/mecEdit/scripts/mecelement/canvasInteractor.js
+          https://jauhl.github.io/mecEdit/scripts/mecelement/g2.selector.js
+          https://jauhl.github.io/mecEdit/scripts/mecelement/mec.htmlelement.js
+
+
+@mec
+<lia-keep>
+<MEC-2 width=800 height=600 grid cartesian darkmode x0=385 y0=139 >
+@0
+</MEC-2>
+</lia-keep>
+@end
+@mec.eval: @mec.eval_(@uid)
+@mec.eval_
+<script>
+let json=`@input`
+document.getElementById("@0").innerHTML = "<MEC-2 id='test' width=1530 height=680 grid cartesian darkmode x0=385 y0=139 >" + json + "</MEC-2>"
+"LIA: stop"
+</script>
+<div id="@0"></div>
+@end
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Symposium-on-International-Teaching-2021/main/README.md)
+
 # Create & Share Interactive online-courses with LiaScript
+
+                              {{0-2}}
+************************************
+
+![Wikipedia](./pic/Title.png)<!-- style="width: 100%";-->
+
+<h5>Symposium Internationale Lehre, Technische Universität Braunschweig, 19.11.2021</h5>
+
+<h5>André Dietrich, Sebastian Zug</h5>
+
+--------------------------
+
+_This material was designed with LiaScript and is available by the [Link](https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021)_
+
+************************************
 
                              --{{1}}--
 These are Sebastian and André your hosts of the today's session about creating
@@ -30,7 +73,7 @@ google-translation.
 
 <!-- style="flex: 1 0 48%; min-width:320px; margin: 0 6px 6px 0;"-->
 > ![Pic: Sebastian Zug](https://tu-freiberg.de/sites/default/files/media/institut-fuer-informatik-9034/professur-st/zug_sebastian_192x125.jpg)
-> __Sebastain Zug__ is Professor of Software Engineering and Robotics at
+> __Sebastian Zug__ is Professor of Software Engineering and Robotics at
 > TU Bergakademie Freiberg. His technical research focuses on outdoor robotics
 > and the modeling of sensor errors in these scenarios. In addition, he works on
 > concepts and tools for the digitalization of teaching. The main focus is on
@@ -56,31 +99,122 @@ google-translation.
 
 ---
 
-                             --{{2}}--
-Before we start, here are a couple of additional resources that allow you to
-take a deeper dive into LiaScript. You can also contact us via email or start a conversation at [gitter](https://gitter.im/LiaScript/community?source=orgpage).
+## Motivation
 
 
-                               {{2}}
-* __Project-Website:__ https://LiaScript.github.io
-* __Open-Source:__ https://github.com/liascript
-* __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
-* __Additional resources:__
+     {{0-1}}
+********************************************************************************
 
-  - Documentation: https://github.com/LiaScript/docs
-  - Free books: https://github.com/LiaBooks
-  - Templates: https://github.com/LiaTemplates
-  - Talks & ...: https://github.com/LiaPlayground
-  - Blog: https://aizac.herokuapp.com
+<!--
+style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
+-->
+```ascii
 
-* __Editor:__ https://atom.io
+Version 1.0                           Version 1.1
++---------------------------+          +---------------------------+
+| Course  German Literatur  |          | Course  German Literature |
+| Authors John Muster       | "Error"  | Authors John Muster       |
+|                           |------->  |         Angelika Maier    |----->
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~|          |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+| In 1756 Goethe visited    |---.      | In 1786 Goethe visited    |--.
+| Italy ...                 |   |      | Italy ...                 |  |
+                                |                                     |
+                                |                                     |    +----------------------------+
+                                |                                     |    | Course  Deutsche Literatur |
+                                |                                     |    | Authors John Muster        |
+                                |                                     .--> |         Angelika Maier     |
+                                |                                          |         Steve Gray         |
+                                |                                          |~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+                                |                                          | 1786 reiste Goethe nach    |
+                                |                                          | Italien ...                |
+                                |       Version 1.0
+                                |      +---------------------------+
+                                |      | Course  Goethe & Schiller |
+                                |      | Authors John Muster       |
+                                .-->   |         Angelika Maier    |----->
+                                       |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+                                       | The correspondence during |
+                                       | the Italian journey ...   |
+```
+*Versions of the content of a course and their reuse in other contexts*
 
-  - Liascript-Preview: https://atom.io/packages/liascript-preview
-  - Liascript-Snippets: https://atom.io/packages/liascript-snippets
 
-* __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
 
-## About LiaScript
+| Expectations and goals | Purpose                                                  |
+| ---------------------- | -------------------------------------------------------- |
+| Editor tools           | Creation and manipulation Software                       |
+| Sharing mechanims      | Transfer materials between teachers                      |
+| Version management     | Overview on existing versions and adaptations            |
+| Interactive content    | Specific teaching materials for broad spectrum of topics |
+| Internationalization   | Transfer between languages                               |
+
+
+    --{{0}}--
+How should teaching materials be created that really deserve the O E R idea?
+They should be freely available AND manipulable. Some protagonists of the
+community emphasize the first aspect and annotate a PDF document as open. But
+courses on a topic are very different, a teacher sets varying priorities or
+chooses another contexts. Hence, a complete adoption is not enough. Furthermore,
+it is necessary to provide materials that can be revised and newly compiled. The
+Figure illustrates this. A number of authors corrected errors and developed
+content that goes into different directions. This also results in completely new
+course configurations or translations of content. What other platform for a
+successful multi-editor knowledge collections could be used as an inspiring
+example?
+
+********************************************************************************
+
+    {{1-2}}
+********************************************************************************
+
+Would it be possible to implement this idea by common slides (Office, OpenOffice)?
+
+![Wikipedia](./pic/Powerpoint.png "Examplary Powerpoint slide")<!-- style="width: 80%; display: block; margin-left: auto; margin-right: auto;"-->
+
+| Expectations and goals | Methods                                         |
+| ---------------------- | ----------------------------------------------- |
+| Editor tools           | ... separate open source or commercial software |
+| Sharing mechanims      | ... by copying files                            |
+| Version management     | ... only direct line predecessors               |
+| Interactive content    | ... limited                                     |
+| Internationalization   | ... have to be done manually                    |
+
+********************************************************************************
+
+
+     {{2-4}}
+********************************************************************************
+
+Wikipedia as a web-based system has brought together millions of authors and
+users. Why does this project succeeds?
+
+![Wikipedia](./pic/HistoryWikipedia.png "Wikipedia Version history of _Federal Republic of Germany_")<!-- style="width: 80%; display: block; margin-left: auto; margin-right: auto;"-->
+
+    --{{2}}--
+The German entry for "Federal Republic of Germany" looked back on 15850 changes
+in May 2019. 3928 users have contributed to this. Wikipedia thus ensures the
+timeliness and quality of the data stock. But where is the key to success?
+Wikipedia stores the entire history of a document. This makes it possible to reconstruct changes, to merge versions, and thus, to eliminate errors very easy.
+
+
+| Expectations and goals | Methods                      |
+| ---------------------- | ---------------------------- |
+| Editor tools           | ... embedded into website    |
+| Sharing mechanims      | ... website                  |
+| Version management     | ... complete                 |
+| Interactive content    | ... non existent             |
+| Internationalization   | ... have to be done manually |
+
+********************************************************************************
+
+      {{3-4}}
+> Wikipedia provides an integrated editor directly connected with the version system!
+
+     --{{3}}--
+The content in Wikipedia are edited in a simple description language [wikitext](https://de.wikipedia.org/wiki/Wikitext). Unlike Word or PDF documents, these are simple text files that can be manipulated in the browser by anyone. Users can make changes in the description language directly within the browser. No separate tool and installation is necessary.   
+
+
+## LiaScript - Basic Concepts
 
                              --{{0}}--
 The development on LiaScript started as a side-project within the
@@ -99,6 +233,7 @@ next to some other benefits.
 
 
                                {{1}}
+* Completly text-based content representation
 * No backend required
 * Works offline (PWA)
 * Open-Source development and Versioning
@@ -112,145 +247,74 @@ we wanted to use it for presentations, but in the same way also for developing
 interactive books, or to have something like YouTube-screencast with automated
 text-to-speech output.
 
-                               {{2}}
-********************************************************************************
 
-**Display-Formats:**
 
-1. Textbook
-2. Presentation
-3. Slides
+### Purely Text based content
 
-********************************************************************************
 
-## Syntax
-
-                             --{{0}}--
+      --{{0}}--
 In order to flatten the learning curve and to not reinvent the wheel, we decided
 to rely on Markdown. But, we also wanted to have an extendable language with
 support for interactivity and beyond the possibilities of today's Learning
 Management Systems.
 
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/HEURGne9Vj856oivkD" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/shecodesio-swipe-up-computer-congratulations-HEURGne9Vj856oivkD">via GIPHY</a></p>
+> LiaScript **based** the description language Markdown.
 
-                             --{{1}}--
-Within the following section, we will shortly introduce the basic Markdown
-syntax and then some of our extensions or reinterpretations.
+        {{1-2}}
+********************************************************************************
 
-
-### 1. Markdown basics
-
-                             --{{1}}--
+      --{{1}}--
 Markdown is a pretty simple Markup-language to learn. Everything starts with a `#`
 or heading. The number of hashtags defines the heading number. In LiaScript
-these headings are also used as separators between different "slides".
-
-
-                              {{1-2}}
-<!-- class="translate"-->
-``` markdown
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-```
-
-                             --{{2}}--
-A paragraph is simply a block of text/sentences that are separated by an empty
+these headings are also used as separators between different "slides". A
+paragraph is simply a block of text/sentences that are separated by an empty
 line. Thus, empty lines do not only provide a visual separator for the author,
 but posses also a semantic value as separators between blocks. By the way, it
 makes no difference if you use only one or multiple empty lines.
 
-                              {{2-3}}
-********************************************************************************
-
+**Markdown content:**
 <!-- class="translate"-->
-``` markdown
-A text block that consists of multiple lines,
-is a simple paragraph.
+```markdown
+# Headline 1
 
-An empty line is a simple divider between
-different paragraphs or other Markdown blocks.
+That's a paragraph!
+
+## Headline 2
+
+_**Highlighted text** in italic font_
+
+* Punkt 1
+* Punkt 2
+
+... and an embedded Equation $a=cos(b)$!
 ```
 
 ---
 
-A text block that consists of multiple lines,
-is a simple paragraph.
+**Resulting output:**
 
-An empty line is a simple divider between
-different paragraphs or other Markdown blocks.
+<div id="markdown-example">
+<h1>Headline 1</h1>
 
-********************************************************************************
+That's a paragraph!
 
-                             --{{3}}--
-How would you create an ordered or unordered list only by using a typewriter?
-Probably in a similar way. You can mix different lists with different Markdown
-blocks. The only thing that is important in this case is to use a proper
-indentation.
-
-                              {{3-4}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-* unordered list
-* with an additional
-
-  1. ordered list
-  2. as a sub element
-
-- isn't that easy?
-```
+<h2>Headline 2</h2>
+<i><b>Highlighted text</b> in italic font</i>
+<ul>
+  <li>Punkt 1</li>
+  <li>Punkt 2</li>
+</ul>
+ and an embedded Equation $a=cos(b)$!
+</div>
 
 ---
 
-* unordered list
-* with an additional
-
-  1. ordered list
-  2. as a sub element
-
-- isn't that easy?
-
 ********************************************************************************
 
-
-                             --{{4}}--
-Highlighting elements within the text as *italic*, **bold**, or ***both*** with
-underlines and other features is also possible, just by surrounding the element
-with asterisks, tildes or underscores or other characters.
-
-                              {{4-5}}
+          {{2}}
 ********************************************************************************
 
-<!-- class="translate"-->
-``` markdown
-- *italic* ... _also italic_
-- **bold** ... __also bold__
-- ***bold and italic*** ... ___also ...___
-- ~crossed out~
-- ~~underlined~~
-- ~~~crossed out and underlined~~~
-- ** ~_and_ mix~tures ** _are **allowed**_ ^~~as~~ *well*^
-```
-
----
-
-- *italic* ... _also italic_
-- **bold** ... __also bold__
-- ***bold and italic*** ... ___also ...___
-- ~crossed out~
-- ~~underlined~~
-- ~~~crossed out and underlined~~~
-- ** ~_and_ mix~tures ** _are **allowed**_ ^~~as~~ *well*^
-
-********************************************************************************
-
-
-                             --{{5}}--
+          --{{2}}--
 Tables are also self-explanatory. The only thing that is relevant in this case
 is the use of colons within the separators between the head and the body. The
 position of colons is used as an indicator of whether the column should be
@@ -258,9 +322,7 @@ aligned to the left, right, or centered. The LiaScript interpreter adds the
 possibility to sort the table by clicking onto the sort-button on the right
 corner of every column header.
 
-                              {{5-6}}
-********************************************************************************
-
+**Markdown Content:**
 <!-- class="translate"-->
 ``` markdown
 | Tables               |      Are      |  Cool |
@@ -272,224 +334,88 @@ corner of every column header.
 
 ---
 
+**Resulting output:**
+
 | Tables               |      Are      |  Cool |
 | -------------------- |:-------------:| -----:|
 | *** columns 3 is *** | right-aligned | $1600 |
 | ** column 2 is **    |   centered    |   $12 |
 | * zebra stripes *    |   are neat    |    $1 |
 
-********************************************************************************
-
-                             --{{6}}--
-Quoting important phrases was inspired by emails.
-
-                              {{6-7}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-> A block-quote with something important that was said long
-> time ago ...
->
-> -- by somebody
-```
-
----
-
-> A block-quote with something important that was said long
-> time ago ...
->
-> -- by somebody
 
 ********************************************************************************
 
 
-                             --{{7}}--
-Last but not least, a piece of code, where syntax-highlighting should be
-applied, has only to be surrounded by at least three backticks with a language
-indicator at the top.
+### Interactive Elements
 
-                              {{7-8}}
+> LiaScript **extends** the description language Markdown and the interpreter by animations and interactive elements.
+
+          {{0-1}}
 ********************************************************************************
 
-````
-``` cpp
-// Your First C++ Program
+**1. Tables**
 
-#include <iostream>
+<!--
+data-title="Government expenditure on education"
+data-xlabel="year"
+data-ylabel="% of GDP"
+-->
+| Year | Finland |     USA | Germany |
+| ---- | -------:| -------:| -------:|
+| 2005 | 6.03605 |         |         |
+| 2006 | 5.93809 |         | 4.27930 |
+| 2007 | 5.68608 |         | 4.34302 |
+| 2008 | 5.84676 |         | 4.40954 |
+| 2009 | 6.48517 |         | 4.88047 |
+| 2010 | 6.54070 | 5.42001 | 4.91368 |
+| 2011 | 6.48200 | 5.22389 | 4.80779 |
+| 2012 | 7.19254 | 5.19485 | 4.93331 |
+| 2013 | 7.15848 | 4.94378 | 4.93496 |
+| 2014 | 7.15155 | 4.98948 | 4.93112 |
 
-int main() {
-    std::cout << "Hello World!";
-    return 0;
-}
-```
-````
-
----
-
-``` cpp
-// Your First C++ Program
-
-#include <iostream>
-
-int main() {
-    std::cout << "Hello World!";
-    return 0;
-}
-```
 
 ********************************************************************************
 
-
-### 2. References
-
-                             --{{0}}--
-There are actually four types of references in Markdown, you can either directly
-place a link everywhere within your documents. Most parsers are pretty smart and
-will recognize this, but this can become quite ugly for long URLs. Hence, you
-can add named links via combination of brackets and parenthesis. The same can be
-used to reference parts within the document and if you want to include an image,
-this link has to be marked with a starting exclamation mark.
-
-
-1. **A direct link:**
-
-   `https://LiaScript.github.io`
-
-   https://LiaScript.github.io
-
-2. **A named link:**
-
-   `[LiaScript](https://LiaScript.github.io)`
-
-   [LiaScript](https://LiaScript.github.io)
-
-3. **An internal link:**
-
-   `[about liascript](#about-liascript)`
-
-   [about liascript](#about-liascript)
-
-4. **An image:**
-
-   `![alt text](https://...url...image.jpg)`
-
-   ![Netherlandish Proverbs](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg/2560px-Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg "Pieter Brueghel the Elder - The Dutch Proverbs")
-
-                             --{{1}}--
-LiaScript is smart enough to scale your the image properly, furthermore it is
-possible to click onto the image in order to enlarge it and inspect the details.
-
-### 3. Extensions
-
-                             --{{0}}--
-By now, you should have a basic understanding of Markdown. Within the next part
-we will go briefly through some of our extensions and reinterpretations that can
-be used to create interactive learning experiences.
-
-<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/uBQNLeszLtiNO" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/disney-cinderella-fairy-godmother-bibbidi-bobbidi-boo-uBQNLeszLtiNO">via GIPHY</a></p>
-
-#### A. Animations & TTS
-
-                             --{{0}}--
-Everything that is related to animations, is associated to braces. Double braces
-at the beginning of a block indicate the point in time when something should
-appear or disappear. Braces surrounded by dashes can be interpreted as the
-explanation for a specific point. That's it, if you change the representation of
-the course, these elements will be treated differently.
-
-<!-- class="translate"-->
-``` markdown
-       --{{1}}--
-See this important table.
-
-             {{1-2}}
-| I   | appear    | at  | first |
-| --- | --------- | --- | ----- |
-| and | disappear | at  | two   |
-
-
-              {{2}}
-* I will remain till the end
-* and do have some {3}{__inline animations__}
-* inline effects can also {3-4}{disappear} ...
-
-        --{{2}}--
-The bullet point list is also quite important, it contains some sub effects
-
-        --{{3 Russian Female}}--
-Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
-Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
-разметке текста в электронных письмах...
-```
-
-       --{{1}}--
-See this important table.
-
-             {{1-2}}
-| I   | appear    | at  | first |
-| --- | --------- | --- | ----- |
-| and | disappear | at  | two   |
-
-
-              {{2}}
-* I will remain till the end
-* and do have some {3}{__inline animations__}
-* inline effects can also {3-4}{disappear} ...
-
-        --{{2}}--
-The bullet point list is also quite important, it contains some sub effects
-
-        --{{3 Russian Female}}--
-Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
-Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
-разметке текста в электронных письмах...
-
-                             --{{4}}--
-If you try out the experimental Google translation, you will find out that
-everything gets translated and also the voice will change, except for the
-Russian text, this will remain.
-
-
-#### B. Movies and XXX
-
-                             --{{0}}--
-We simply extended reference in three ways. If an exclamation mark is used to
-identify an image, then maybe a question mark can be used for audio files.
-
-                              {{0-2}}
-``` markdown
-?[soundcloud](https://soundcloud.com/glennmorrison/beethoven-moonlight-sonata)
-```
-
-                              {{1-2}}
-?[soundcloud](https://soundcloud.com/glennmorrison/beethoven-moonlight-sonata)
-
-
-                             --{{2}}--
-And if you combine an image with audio, then this can be used as a marker for
-videos.
-
-                              {{2-4}}
-``` markdown
-!?[Create an LMS Educational Website](https://www.youtube.com/watch?v=df5hfVID5mo)
-```
-
-                             --{{3}}--
-The following example shows, how you can create an educational website in three
-hours, content creation not included.
-
-                              {{3-4}}
-!?[Create an LMS Educational Website](https://www.youtube.com/watch?v=df5hfVID5mo)
-
-
-                             --{{4}}--
-And finally, if you have no idea, then use two question marks. In this case
-LiaScript will try to oEmbed the content of the link or at least try to add this
-as an iframe.
-
-                               {{4}}
+         {{1-2}}
 ********************************************************************************
+
+**2. Quizze**
+
+```markdown
+What is the solution of $y=2x+3$ for $x=5$?
+[[X]] 13
+[[ ]] 17
+[[ ]] 3
+[[?]] Replace x by the actual value 5 in the equation.
+****************************************
+
+This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
+
+****************************************
+```
+
+----
+
+What is the solution of $y=2x+3$ for $x=5$?
+
+[[X]] 13
+[[ ]] 17
+[[ ]] 3
+[[?]] Replace x by the actual value 5 in the equation.
+****************************************
+
+This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
+
+****************************************
+
+----
+
+********************************************************************************
+
+         {{2-3}}
+********************************************************************************
+
+**3. Webcomponents**
 
 ``` markdown
 ??[anatomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
@@ -499,406 +425,173 @@ as an iframe.
 
 ********************************************************************************
 
-#### C. Coding
 
-                             --{{0}}--
-The script-tag is a native element in LiaScript. It can be either used
-stand-alone or in combination with other elements. If you attach a script-tag to
-a Markdown code-block, then this tells the LiaScript interpreter that this is an
-editable and executable piece of code. The script-tag in this case is used to
-tell LiaScript how to deal with the code. If it is JavaScript, then directly
-interpret the input code.
+### Plugins for different lectures
 
+> LiaScript can be extended by individual plugins interacting with JavaScript Libraries.
 
-```` markdown
-``` javascript
-console.log("Hello World")
-
-console.warn("Global climate change is a serious threat!!!")
-
-42
-```
-<script>@input</script>
-````
-
-                             --{{1}}--
-You can execute and modify this piece of code directly. Every change creates a
-new version and you as a user can go back and forth.
-
-
-                               {{1}}
-``` javascript
-console.log("Hello World")
-
-console.warn("Global climate change is a serious threat!!!")
-
-42
-```
-<script>@input</script>
-
-
-                             --{{2}}--
-But such script-tags can contain also more elaborate code, which you don't want
-to copy and paste again and again. LiaScript therefore offers the opportunity to
-create macros, which can be parameterized and imported from other courses, Just
-like an ordinary library as it done in other programming languages.
-
-
-                               {{2}}
-```` markdown
-<div id="example">
-<wokwi-led color="red"   pin="13" label="13"></wokwi-led>
-<wokwi-led color="green" pin="12" label="12"></wokwi-led>
-<wokwi-led color="blue"  pin="11" label="11"></wokwi-led>
-<wokwi-led color="blue"  pin="10" label="10"></wokwi-led>
-<span id="simulation-time"></span>
-</div>
-
-``` cpp
-byte leds[] = {13, 12, 11, 10};
-void setup() {
-  Serial.begin(115200);
-  for (byte i = 0; i < sizeof(leds); i++) {
-    pinMode(leds[i], OUTPUT);
-  }
-}
-
-int i = 0;
-void loop() {
-  Serial.print("LED: ");
-  Serial.println(i);
-  digitalWrite(leds[i], HIGH);
-  delay(250);
-  digitalWrite(leds[i], LOW);
-  i = (i + 1) % sizeof(leds);
-}
-```
-@AVR8js.sketch(example)
-````
-
-                             --{{3}}--
-The `@`-whatsoever gets replaced by a more complex script and by importing the
-template course, your course also adds all relevant JavaScript, CSS, and a bunch
-of additional elements that might be required.
-
-                               {{3}}
+                         {{0-1}}
 ********************************************************************************
 
-<div id="example">
-<wokwi-led color="red"   pin="13" label="13"></wokwi-led>
-<wokwi-led color="green" pin="12" label="12"></wokwi-led>
-<wokwi-led color="blue"  pin="11" label="11"></wokwi-led>
-<wokwi-led color="blue"  pin="10" label="10"></wokwi-led>
-<span id="simulation-time"></span>
-</div>
+**1. Computer Science (Contributor Yannik Höll)**
 
-``` cpp
-byte leds[] = {13, 12, 11, 10};
-void setup() {
-  Serial.begin(115200);
-  for (byte i = 0; i < sizeof(leds); i++) {
-    pinMode(leds[i], OUTPUT);
-  }
+```cpp
+// Your First C++ Program
+
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World!";
+    return 0;
 }
+@LIA.eval(`["main.c"]`, `g++ main.c -o a.out`, `./a.out`)
+```
 
-int i = 0;
-void loop() {
-  Serial.print("LED: ");
-  Serial.println(i);
-  digitalWrite(leds[i], HIGH);
-  delay(250);
-  digitalWrite(leds[i], LOW);
-  i = (i + 1) % sizeof(leds);
+```cpp MyFirstC++.cpp
+// Your First C++ Program
+
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World!";
+    return 0;
 }
 ```
-@AVR8js.sketch(example)
+@LIA.eval(`["main.c"]`, `g++ -Wall main.c -o a.out`, `./a.out`)
 
 ********************************************************************************
 
-#### D. Data & Tables
+                       {{1-2}}
+********************************************************************************
 
-                             --{{0}}--
-Only a quick side-note. Tables in most cases also contain some form of
-structured data that begs for being visualized.
+**Mechanical Engineering (Contributor TU Chemnitz)**
 
-                             --{{1}}--
-Thus, if you see the following table, how would you visualize it?
+``` json @mec
+{
+  "id":"chaos-pendulums",
+  "gravity":true,
+  "nodes": [
+    { "id":"A0","x":200,"y":400,"base":true },
+    { "id":"A1","x":280,"y":480,"m":2 },
+    { "id":"B1","x":279,"y":481,"m":2 },
+    { "id":"C1","x":278,"y":482,"m":2 },
+    { "id":"D1","x":277,"y":483,"m":2 },
+    { "id":"A2","x":360,"y":560,"m":3 },
+    { "id":"B2","x":359,"y":561,"m":3 },
+    { "id":"C2","x":358,"y":562,"m":3 },
+    { "id":"D2","x":357,"y":563,"m":3 },
+    { "id":"A3","x":440,"y":640,"m":4.7 },
+    { "id":"B3","x":439,"y":641,"m":4.7 },
+    { "id":"C3","x":438,"y":642,"m":4.7 },
+    { "id":"D3","x":437,"y":643,"m":4.7 }
+  ],
+  "constraints": [
+    { "id":"a1","p1":"A0","p2":"A1","len":{ "type":"const" } },
+    { "id":"a2","p1":"A1","p2":"A2","len":{ "type":"const" } },
+    { "id":"a3","p1":"A2","p2":"A3","len":{ "type":"const" } },
+    { "id":"b1","p1":"A0","p2":"B1","len":{ "type":"const" } },
+    { "id":"b2","p1":"B1","p2":"B2","len":{ "type":"const" } },
+    { "id":"b3","p1":"B2","p2":"B3","len":{ "type":"const" } },
+    { "id":"c1","p1":"A0","p2":"C1","len":{ "type":"const" } },
+    { "id":"c2","p1":"C1","p2":"C2","len":{ "type":"const" } },
+    { "id":"c3","p1":"C2","p2":"C3","len":{ "type":"const" } },
+    { "id":"d1","p1":"A0","p2":"D1","len":{ "type":"const" } },
+    { "id":"d2","p1":"D1","p2":"D2","len":{ "type":"const" } },
+    { "id":"d3","p1":"D2","p2":"D3","len":{ "type":"const" } }
+  ],
+  "views": [
+    { "show":"pos","of":"A3","as":"trace","id":"view1","stroke":"rgba(255,0,0,.5)" },
+    { "show":"pos","of":"B3","as":"trace","id":"view2","stroke":"rgba(0,255,0,.5)" },
+    { "show":"pos","of":"C3","as":"trace","id":"view3","stroke":"rgba(255,255,0,.5)" },
+    { "show":"pos","of":"D3","as":"trace","id":"view4","stroke":"rgba(255,0,255,.5)" }
+  ]
+}
+```
+
+********************************************************************************
 
 
-                              {{1-3}}
-``` markdown
+### Workflow
+
 <!--
-data-title="Government expenditure on education"
-data-xlabel="year"
-data-ylabel="% of GDP"
+style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
 -->
-| Year | Finland |     USA | Germany |   China |
-| ---- | -------:| -------:| -------:| -------:|
-| 1995 | 6.80942 |         | 4.42079 | 1.84192 |
-| 1996 | 6.86052 |         | 4.48319 | 1.85338 |
-| 1997 |         |         |         |         |
-| 1998 |         |         | 4.45345 | 1.84432 |
-| 1999 | 5.86960 |         |         | 1.88803 |
-| 2000 | 5.71687 |         |         |         |
-| 2001 | 5.84797 |         |         |         |
-| 2002 | 6.02477 |         |         |         |
-| 2003 | 6.17476 |         |         |         |
-| 2004 | 6.16849 |         |         |         |
-| 2005 | 6.03605 |         |         |         |
-| 2006 | 5.93809 |         | 4.27930 |         |
-| 2007 | 5.68608 |         | 4.34302 |         |
-| 2008 | 5.84676 |         | 4.40954 |         |
-| 2009 | 6.48517 |         | 4.88047 |         |
-| 2010 | 6.54070 | 5.42001 | 4.91368 |         |
-| 2011 | 6.48200 | 5.22389 | 4.80779 |         |
-| 2012 | 7.19254 | 5.19485 | 4.93331 |         |
-| 2013 | 7.15848 | 4.94378 | 4.93496 |         |
-| 2014 | 7.15155 | 4.98948 | 4.93112 |         |
-```
+`````````
 
-                             --{{2}}--
-Probably also as a line-chart, and this is what LiaScript does as well. It tries
-to find patterns for the most appropriate visualization.
+Generierung                    Publikation          Konsum durch Lernende
 
-                              {{2-3}}
-<!--
-data-title="Government expenditure on education"
-data-xlabel="year"
-data-ylabel="% of GDP"
+
+                                                           .-----------.
+    | Plugin A                                      ╔══════╡ Browser   ╞══════╗ Modes:
+    |  | Plugin B                           native  ║      .-----------.      ║ "+" Textbook
+    v  v                                  +-------> ║ Digitale Systeme        ║ "+" Presentation
++---------------------+                   |         ║ (WiSe 2020)             ║ "+" Slides
+| # Digitale Systeme  |\          .-,(  ),-.        ╚═════════════════════════╝
+| (WiSe 2020)         +-+      .-(          )-.            .-----------.
+|                       | --> ( Cloud Speicher )    ╔══════╡ LMS       ╞══════╗
+| Fallbeispiele         |      '-(         ).-'     ║      .-----------.      ║
+| + ...                 |         '-.( ).-' SCORM   ║ Digitale Systeme        ║
++-----------------------+                 +-------> ║ (WiSe 2020)             ║
+                                          |         ╚═════════════════════════╝
+                                          |                .-----------.
+                                          |         ╔══════╡ pdfViewer ╞══════╗
+                                          | export  ║      .-----------.      ║
+                                          +-------> ║ Digitale Systeme        ║
+                                                    ║ (WiSe 2020)             ║
+                                                    ╚═════════════════════════╝   
+
+"+"Atom Editor with          "+"Github
+   LiaScript Extention       "+"Dropbox
+"+"CodiLia Online Editor     "+"...
+   @TUBAF                                                                                    .
+`````````
+
+
+ {{1}}
+| Expectations and goals | Methods                                       |
+| ---------------------- | --------------------------------------------- |
+| Editor tools           | ... generic text or online editor             |
+| Sharing mechanims      | ... via Github, DropBox, IPFs etc.            |
+| Version management     | ... using git                                 |
+| Interactive content    | ... implements a plugin concept               |
+| Internationalization   | ... automated translation (work in progress ) |
+
+
+## Advanced Concepts
+
+> Puhhh ... a lot of information for 20min! Please take a closer view to our examples and documentations for diving in LiaScript.
+
+* __Project-Website:__ https://LiaScript.github.io
+* __Open-Source:__ https://github.com/liascript
+* __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
+* __Additional resources:__
+
+  - Documentation: https://github.com/LiaScript/docs
+  - Free books: https://github.com/LiaBooks
+  - Templates: https://github.com/LiaTemplates
+  - Talks & ...: https://github.com/LiaPlayground
+  - Blog: https://aizac.herokuapp.com
+
+* __Editor:__ https://atom.io
+
+  - Liascript-Preview: https://atom.io/packages/liascript-preview
+  - Liascript-Snippets: https://atom.io/packages/liascript-snippets
+
+* __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
+
+
+## User stories
+
+![Konflikt](https://raw.githubusercontent.com/liaScript/Workshop/master/img/GitScreenShot.png)<!--
+style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
 -->
-| Year | Finland |     USA | Germany |   China |
-| ---- | -------:| -------:| -------:| -------:|
-| 1995 | 6.80942 |         | 4.42079 | 1.84192 |
-| 1996 | 6.86052 |         | 4.48319 | 1.85338 |
-| 1997 |         |         |         |         |
-| 1998 |         |         | 4.45345 | 1.84432 |
-| 1999 | 5.86960 |         |         | 1.88803 |
-| 2000 | 5.71687 |         |         |         |
-| 2001 | 5.84797 |         |         |         |
-| 2002 | 6.02477 |         |         |         |
-| 2003 | 6.17476 |         |         |         |
-| 2004 | 6.16849 |         |         |         |
-| 2005 | 6.03605 |         |         |         |
-| 2006 | 5.93809 |         | 4.27930 |         |
-| 2007 | 5.68608 |         | 4.34302 |         |
-| 2008 | 5.84676 |         | 4.40954 |         |
-| 2009 | 6.48517 |         | 4.88047 |         |
-| 2010 | 6.54070 | 5.42001 | 4.91368 |         |
-| 2011 | 6.48200 | 5.22389 | 4.80779 |         |
-| 2012 | 7.19254 | 5.19485 | 4.93331 |         |
-| 2013 | 7.15848 | 4.94378 | 4.93496 |         |
-| 2014 | 7.15155 | 4.98948 | 4.93112 |         |
 
+> The text based representation of tables, diagrams, formulars allows students to contribute to the material directly.
 
-                             --{{3}}--
-The following table might look like a bar-chart, since the first column does not
-contain any numbers. But instead, this could be identified as categories.
+## Save the date
 
 
-                              {{3-5}}
-``` md
-| Animal          | weight in kg | Lifespan years | Mitogen |
-| --------------- | ------------:| --------------:| -------:|
-| Mouse           |        0.028 |              2 |      95 |
-| Flying squirrel |        0.085 |             15 |      50 |
-| Brown bat       |        0.020 |             30 |      10 |
-| Sheep           |           90 |             12 |      95 |
-| Human           |           68 |             70 |      10 |
-```
+Ankündigung Tutorial - Hinweis auf die OEB?
 
-                             --{{4}}--
-You can try to sort the table and check the resulting visualization and also
-filter it.
 
-
-                              {{4-5}}
-| Animal          | weight in kg | Lifespan years | Mitogen |
-| --------------- | ------------:| --------------:| -------:|
-| Mouse           |        0.028 |              2 |      95 |
-| Flying squirrel |        0.085 |             15 |      50 |
-| Brown bat       |        0.020 |             30 |      10 |
-| Sheep           |           90 |             12 |      95 |
-| Human           |           68 |             70 |      10 |
-
-
-                             --{{5}}--
-A table with only one line might be interpreted as a pie-chart. But, it is also
-possible to combine this with animations, as we had seen it earlier.
-
-                               {{5}}
-``` markdown
-| Music-Style {0-1}{1994} {1}{2014} |           Classic |           Country | Reggae |             Hip-Hop |           Hard-Rock |               Samba |
-|:--------------------------------- | -----------------:| -----------------:| ------:| -------------------:| -------------------:| -------------------:|
-| Student rating                    | {0-1}{50} {1}{20} | {0-1}{50} {1}{30} |    100 | {0-1}{200} {1}{220} | {0-1}{350} {1}{400} | {0-1}{250} {1}{230} |
-
-```
-
-                             --{{6}}--
-Thus, if you change to the visualization, the changes might become more obvious.
-
-                               {{6}}
-| Music-Style {6-7}{1994} {7}{2014} |           Classic |           Country | Reggae |             Hip-Hop |           Hard-Rock |               Samba |
-|:--------------------------------- | -----------------:| -----------------:| ------:| -------------------:| -------------------:| -------------------:|
-| Student rating                    | {6-7}{50} {7}{20} | {6-7}{50} {7}{30} |    100 | {6-7}{200} {7}{220} | {6-7}{350} {7}{400} | {6-7}{250} {7}{230} |
-
-#### E. Quizzes?
-
-                             --{{0}}--
-Quizzes in LiaScript, as we hope, are self-explanatory and are always associated
-with brackets or brackets in combination with parenthesis.
-
-                             --{{1}}--
-A simple text-input would then look like this, a question with a dedicated input.
-
-                              {{1-2}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-What's the name of the Markdown-dialect that
-was developed to create educational content?
-
-    [[LiaScript]]
-```
-
----
-
-What's the name of the Markdown-dialect that
-was developed to create educational content?
-
-    [[LiaScript]]
-
-********************************************************************************
-
-
-                             --{{2}}--
-The critical reader will notice, that different spellings of `LiaScript` are not
-allowed. The input has to exactly match the input field. However, just by
-applying a simple script-tag, as we have seen it previously in section
-[Coding](#c.-coding), will do this job for us. Such scripts can be attached to
-all quizzes.
-
-                              {{2-3}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-What's the name of the Markdown-dialect that
-was developed to create educational content?
-
-    [[LiaScript]]
-    <script>
-        "liascript" === "@input".trim().toLowerCase()
-    </script>
-```
-
----
-
-What's the name of the Markdown-dialect that
-was developed to create educational content?
-
-    [[LiaScript]]
-    <script>
-        "liascript" === "@input".trim().toLowerCase()
-    </script>
-
-********************************************************************************
-
-                             --{{3}}--
-Similarly, you can also define multiple-choice quizzes, only with the power of
-your keyboard. No further configuration is required.
-
-                              {{3-4}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-Just add as many points as you wish:
-
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
-```
-
----
-
-Just add as many points as you wish:
-
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
-
-********************************************************************************
-
-
-                             --{{4}}--
-A single-choice quiz is simply the imitation of radio-buttons with parenthesis.
-If you solve the following quiz, you can play as much Prince of Persia as you
-want.
-
-
-                               {{4}}
-********************************************************************************
-
-<!-- class="translate"-->
-``` markdown
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
-*************************************************
-
-??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
-
-*************************************************
-```
-
----
-
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
-*************************************************
-
-??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
-
-*************************************************
-
-********************************************************************************
-
-
-                             --{{5}}--
-You can also combine single-choice and multiple-choice quizzes to create even
-more complex tests, but that it for the moment. We will go on by presenting a
-typical workflow of how courses are developed and used in Freiberg.
-
-
-## A typical workflow
-
-Vielleicht kann man hier noch mit einem ASCII-Art Sequenz Diagramm arbeiten ...
-
-```````````````
- ----+-----
-     |
-     |
-
-
-```````````````
-
-## Publishing via ...
-
-### GitHub
-
-### DropBox
-
-### IPFS
-
-### Beaker
-
-### ...
-
-
-## Tasks
+> **Thanks for your attention**
