@@ -49,15 +49,13 @@ document.getElementById("@0").innerHTML = "<MEC-2 id='test' width=1530 height=68
                               {{0-2}}
 ************************************
 
-![Wikipedia](./pic/Title.png)<!-- style="width: 100%";-->
+![Wikipedia](./pic/Title.png)
 
-<h5>Symposium Internationale Lehre, Technische Universität Braunschweig, 19.11.2021</h5>
-
-<h5>André Dietrich, Sebastian Zug</h5>
-
---------------------------
-
-_This material was designed with LiaScript and is available by the [Link](https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021)_
+> ##### Symposium Internationale Lehre, Technische Universität Braunschweig, 19.11.2021
+>
+> **André Dietrich, Sebastian Zug**
+>
+> -- _This material was designed with LiaScript and is available by the [Link](https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021)_
 
 ************************************
 
@@ -105,10 +103,20 @@ google-translation.
      {{0-1}}
 ********************************************************************************
 
-<!--
-style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
+    --{{0}}--
+How should teaching materials be created that really deserve the OER idea? They
+should be freely available AND manipulable. Some protagonists of the community
+emphasize the first aspect and annotate a PDF document as open. But courses on a
+topic are very different, a teacher sets varying priorities or chooses another
+contexts. Hence, a complete adoption is not enough. Furthermore, it is necessary
+to provide materials that can be revised and newly compiled. The Figure
+illustrates this. A number of authors corrected errors and developed content
+that goes into different directions. This also results in completely new course
+configurations or translations of content. What other platform for a successful
+multi-editor knowledge collections could be used as an inspiring example?
+
+
+```ascii   *Versions of the content of a course and their reuse in other contexts*
 
 Version 1.0                           Version 1.1
 +---------------------------+          +---------------------------+
@@ -136,8 +144,8 @@ Version 1.0                           Version 1.1
                                        | The correspondence during |
                                        | the Italian journey ...   |
 ```
-*Versions of the content of a course and their reuse in other contexts*
 
+---
 
 
 | Expectations and goals | Purpose                                                  |
@@ -148,28 +156,18 @@ Version 1.0                           Version 1.1
 | Interactive content    | Specific teaching materials for broad spectrum of topics |
 | Internationalization   | Transfer between languages                               |
 
-
-    --{{0}}--
-How should teaching materials be created that really deserve the O E R idea?
-They should be freely available AND manipulable. Some protagonists of the
-community emphasize the first aspect and annotate a PDF document as open. But
-courses on a topic are very different, a teacher sets varying priorities or
-chooses another contexts. Hence, a complete adoption is not enough. Furthermore,
-it is necessary to provide materials that can be revised and newly compiled. The
-Figure illustrates this. A number of authors corrected errors and developed
-content that goes into different directions. This also results in completely new
-course configurations or translations of content. What other platform for a
-successful multi-editor knowledge collections could be used as an inspiring
-example?
-
 ********************************************************************************
+
 
     {{1-2}}
 ********************************************************************************
 
+    --{{1}}--
 Would it be possible to implement this idea by common slides (Office, OpenOffice)?
 
-![Wikipedia](./pic/Powerpoint.png "Examplary Powerpoint slide")<!-- style="width: 80%; display: block; margin-left: auto; margin-right: auto;"-->
+![PowerPoint slide example](./pic/Powerpoint.png "Examplary Powerpoint slide")
+
+---
 
 | Expectations and goals | Methods                                         |
 | ---------------------- | ----------------------------------------------- |
@@ -185,10 +183,10 @@ Would it be possible to implement this idea by common slides (Office, OpenOffice
      {{2-4}}
 ********************************************************************************
 
-Wikipedia as a web-based system has brought together millions of authors and
-users. Why does this project succeeds?
+> Wikipedia as a web-based system has brought together millions of authors and
+> users. Why does this project succeeds?
 
-![Wikipedia](./pic/HistoryWikipedia.png "Wikipedia Version history of _Federal Republic of Germany_")<!-- style="width: 80%; display: block; margin-left: auto; margin-right: auto;"-->
+![Wikipedia](./pic/HistoryWikipedia.png "Wikipedia Version history of _Federal Republic of Germany_")
 
     --{{2}}--
 The German entry for "Federal Republic of Germany" looked back on 15850 changes
@@ -196,6 +194,7 @@ in May 2019. 3928 users have contributed to this. Wikipedia thus ensures the
 timeliness and quality of the data stock. But where is the key to success?
 Wikipedia stores the entire history of a document. This makes it possible to reconstruct changes, to merge versions, and thus, to eliminate errors very easy.
 
+---
 
 | Expectations and goals | Methods                      |
 | ---------------------- | ---------------------------- |
@@ -211,7 +210,7 @@ Wikipedia stores the entire history of a document. This makes it possible to rec
 > Wikipedia provides an integrated editor directly connected with the version system!
 
      --{{3}}--
-The content in Wikipedia are edited in a simple description language [wikitext](https://de.wikipedia.org/wiki/Wikitext). Unlike Word or PDF documents, these are simple text files that can be manipulated in the browser by anyone. Users can make changes in the description language directly within the browser. No separate tool and installation is necessary.   
+The content in Wikipedia are edited in a simple description language [wikitext](https://de.wikipedia.org/wiki/Wikitext). Unlike Word or PDF documents, these are simple text files that can be manipulated in the browser by anyone. Users can make changes in the description language directly within the browser. No separate tool and installation is necessary.
 
 
 ## LiaScript - Basic Concepts
@@ -222,6 +221,7 @@ The development on LiaScript started as a side-project within the
 Magdeburg. You can check out the following video resource, which shows an
 earlier version of the system as well as an historical outline.
 
+                              {{0-1}}
 !?[Open Course Development with Liascript](https://www.youtube.com/watch?v=w_CRABsJNKA)
 
 
@@ -273,6 +273,7 @@ but posses also a semantic value as separators between blocks. By the way, it
 makes no difference if you use only one or multiple empty lines.
 
 **Markdown content:**
+
 <!-- class="translate"-->
 ```markdown
 # Headline 1
@@ -283,8 +284,8 @@ That's a paragraph!
 
 _**Highlighted text** in italic font_
 
-* Punkt 1
-* Punkt 2
+* Point 1
+* Point 2
 
 ... and an embedded Equation $a=cos(b)$!
 ```
@@ -293,19 +294,18 @@ _**Highlighted text** in italic font_
 
 **Resulting output:**
 
-<div id="markdown-example">
 <h1>Headline 1</h1>
 
 That's a paragraph!
 
 <h2>Headline 2</h2>
-<i><b>Highlighted text</b> in italic font</i>
-<ul>
-  <li>Punkt 1</li>
-  <li>Punkt 2</li>
-</ul>
- and an embedded Equation $a=cos(b)$!
-</div>
+
+_**Highlighted text** in italic font_
+
+* Point 1
+* Point 2
+
+... and an embedded Equation $a=cos(b)$!
 
 ---
 
@@ -323,6 +323,7 @@ possibility to sort the table by clicking onto the sort-button on the right
 corner of every column header.
 
 **Markdown Content:**
+
 <!-- class="translate"-->
 ``` markdown
 | Tables               |      Are      |  Cool |
@@ -348,53 +349,110 @@ corner of every column header.
 
 ### Interactive Elements
 
-> LiaScript **extends** the description language Markdown and the interpreter by animations and interactive elements.
+> LiaScript **extends** the description language Markdown by
+> animations, interactive elements, and a macro-system.
 
-          {{0-1}}
+          {{1-3}}
 ********************************************************************************
 
-**1. Tables**
+**Tables & Data**
 
+    --{{1}}--
+Thus, if you see the following table, how would you visualize it?
+
+``` markdown
 <!--
 data-title="Government expenditure on education"
 data-xlabel="year"
 data-ylabel="% of GDP"
 -->
-| Year | Finland |     USA | Germany |
-| ---- | -------:| -------:| -------:|
-| 2005 | 6.03605 |         |         |
-| 2006 | 5.93809 |         | 4.27930 |
-| 2007 | 5.68608 |         | 4.34302 |
-| 2008 | 5.84676 |         | 4.40954 |
-| 2009 | 6.48517 |         | 4.88047 |
-| 2010 | 6.54070 | 5.42001 | 4.91368 |
-| 2011 | 6.48200 | 5.22389 | 4.80779 |
-| 2012 | 7.19254 | 5.19485 | 4.93331 |
-| 2013 | 7.15848 | 4.94378 | 4.93496 |
-| 2014 | 7.15155 | 4.98948 | 4.93112 |
+| Year | Finland |     USA | Germany |   China |
+| ---- | -------:| -------:| -------:| -------:|
+| 1995 | 6.80942 |         | 4.42079 | 1.84192 |
+| 1996 | 6.86052 |         | 4.48319 | 1.85338 |
+| 1997 |         |         |         |         |
+| 1998 |         |         | 4.45345 | 1.84432 |
+| 1999 | 5.86960 |         |         | 1.88803 |
+| 2000 | 5.71687 |         |         |         |
+| 2001 | 5.84797 |         |         |         |
+| ...  | ...     |         |         |         |
+```
+
+    --{{2}}--
+Probably also as a line-chart, and this is what LiaScript does as well. It tries
+to find patterns for the most appropriate visualization.
+
+     {{2-3}}
+<!--
+data-title="Government expenditure on education"
+data-xlabel="year"
+data-ylabel="% of GDP"
+-->
+| Year | Finland |     USA | Germany |   China |
+| ---- | -------:| -------:| -------:| -------:|
+| 1995 | 6.80942 |         | 4.42079 | 1.84192 |
+| 1996 | 6.86052 |         | 4.48319 | 1.85338 |
+| 1997 |         |         |         |         |
+| 1998 |         |         | 4.45345 | 1.84432 |
+| 1999 | 5.86960 |         |         | 1.88803 |
+| 2000 | 5.71687 |         |         |         |
+| 2001 | 5.84797 |         |         |         |
+| 2002 | 6.02477 |         |         |         |
+| 2003 | 6.17476 |         |         |         |
+| 2004 | 6.16849 |         |         |         |
+| 2005 | 6.03605 |         |         |         |
+| 2006 | 5.93809 |         | 4.27930 |         |
+| 2007 | 5.68608 |         | 4.34302 |         |
+| 2008 | 5.84676 |         | 4.40954 |         |
+| 2009 | 6.48517 |         | 4.88047 |         |
+| 2010 | 6.54070 | 5.42001 | 4.91368 |         |
+| 2011 | 6.48200 | 5.22389 | 4.80779 |         |
+| 2012 | 7.19254 | 5.19485 | 4.93331 |         |
+| 2013 | 7.15848 | 4.94378 | 4.93496 |         |
+| 2014 | 7.15155 | 4.98948 | 4.93112 |         |
+
 
 
 ********************************************************************************
 
-         {{1-2}}
+         {{3-5}}
 ********************************************************************************
 
-**2. Quizze**
+**Quizzes**
 
+    --{{3}}--
+Quizzes in LiaScript, as we hope, are self-explanatory and are always associated
+with brackets or brackets in combination with parenthesis.
+
+
+    --{{4}}--
+For example a multiple-choice quizzes can be defined as follows, only with the
+power of your keyboard. No further configuration is required. And if you want to
+convert it into a single-choice quiz, simply replace the inner brackets by
+parenthesis.
+
+
+      {{4}}
+******************************************************************
+
+<!-- class="translate"-->
 ```markdown
 What is the solution of $y=2x+3$ for $x=5$?
-[[X]] 13
-[[ ]] 17
-[[ ]] 3
-[[?]] Replace x by the actual value 5 in the equation.
+
+    [[X]] 13
+    [[ ]] 17
+    [[ ]] 3
+    [[?]] Replace x by the actual value 5 in the equation.
 ****************************************
 
 This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
+
+??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
 
 ****************************************
 ```
 
-----
+---
 
 What is the solution of $y=2x+3$ for $x=5$?
 
@@ -406,16 +464,25 @@ What is the solution of $y=2x+3$ for $x=5$?
 
 This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
 
+??[Prince of Persia 4D](https://archive.org/details/msdos_4D_Prince_of_Persia_1994)
+
 ****************************************
 
-----
+******************************************************************
 
 ********************************************************************************
 
-         {{2-3}}
+
+         {{5}}
 ********************************************************************************
 
-**3. Webcomponents**
+**External Components**
+
+                      --{{5}}--
+And finally, if want to embed an external resource and you have no idea of how
+to do that, you can also rely on our extension to links. Simply add two question
+marks. In this case LiaScript will try to oEmbed the content of the link or at
+least try to add this as an iframe.
 
 ``` markdown
 ??[anatomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
@@ -424,6 +491,67 @@ This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
 ??[anatomy of the eye](https://sketchfab.com/3d-models/the-human-eye-extrinsic-muscle-contraction-20-dc9c88630b6c42a8b242fd6024d0697f)
 
 ********************************************************************************
+
+
+### Presentations, Books, etc.
+
+    --{{0}}--
+Everything that is related to animations, is associated to braces. Double braces
+at the beginning of a block indicate the point in time when something should
+appear or disappear. Braces surrounded by dashes can be interpreted as the
+explanation for a specific point. That's it, if you change the representation of
+the course, these elements will be treated differently.
+
+<!-- class="translate"-->
+``` markdown
+    --{{1}}--
+See this important table.
+
+     {{1-2}}
+| I   | appear    | at  | first |
+| --- | --------- | --- | ----- |
+| and | disappear | at  | two   |
+
+     {{2}}
+* I will remain till the end
+* and do have some {3}{__inline animations__}
+* inline effects can also {3-4}{disappear} ...
+
+    --{{2}}--
+The bullet point list is also quite important, it contains some sub effects
+
+    --{{3 Russian Female}}--
+Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
+Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
+разметке текста в электронных письмах...
+```
+
+    --{{1}}--
+See this important table.
+
+     {{1-2}}
+| I   | appear    | at  | first |
+| --- | --------- | --- | ----- |
+| and | disappear | at  | two   |
+
+
+      {{2}}
+* I will remain till the end
+* and do have some {3}{__inline animations__}
+* inline effects can also {3-4}{disappear} ...
+
+    --{{2}}--
+The bullet point list is also quite important, it contains some sub effects
+
+    --{{3 Russian Female}}--
+Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
+Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
+разметке текста в электронных письмах...
+
+    --{{4}}--
+If you try out the experimental Google translation, you will find out that
+everything gets translated and also the voice will change, except for the
+Russian text, this will remain.
 
 
 ### Plugins for different lectures
@@ -435,26 +563,38 @@ This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
 
 **1. Computer Science (Contributor Yannik Höll)**
 
+```` markdown
 ```cpp
-// Your First C++ Program
-
 #include <iostream>
 
 int main() {
-    std::cout << "Hello World!";
-    return 0;
+  int max = 0;
+  std::cout << "How many Hellos?";
+
+  std::cin >> max;
+
+  for(int i=0; i<max; i++)
+  printf ("Hello, world %d!\n", i + 1);
+
+  return 0;
 }
-@LIA.eval(`["main.c"]`, `g++ main.c -o a.out`, `./a.out`)
 ```
+@LIA.eval(`["main.c"]`, `g++ main.c -o a.out`, `./a.out`)
+````
 
-```cpp MyFirstC++.cpp
-// Your First C++ Program
-
+```cpp Main.cpp
 #include <iostream>
 
 int main() {
-    std::cout << "Hello World!";
-    return 0;
+  int max = 0;
+  std::cout << "How many Hellos?";
+
+  std::cin >> max;
+
+  for(int i=0; i<max; i++)
+  printf ("Hello, world %d!\n", i + 1);
+
+  return 0;
 }
 ```
 @LIA.eval(`["main.c"]`, `g++ -Wall main.c -o a.out`, `./a.out`)
@@ -513,11 +653,8 @@ int main() {
 
 ### Workflow
 
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-`````````
 
+`````````
 Generierung                    Publikation          Konsum durch Lernende
 
 
@@ -538,12 +675,13 @@ Generierung                    Publikation          Konsum durch Lernende
                                           | export  ║      .-----------.      ║
                                           +-------> ║ Digitale Systeme        ║
                                                     ║ (WiSe 2020)             ║
-                                                    ╚═════════════════════════╝   
+                                                    ╚═════════════════════════╝
 
-"+"Atom Editor with          "+"Github
-   LiaScript Extention       "+"Dropbox
-"+"CodiLia Online Editor     "+"...
-   @TUBAF                                                                                    .
+"- Atom Editor with LiaScript Extention            "   |"- [Github](https://github.io)         "
+"- [CodiLia](https://github.com/liascript/codilia) "   |"- [Dropbox](https://www.dropbox.com)  "
+"  Online Editor @TUBAF                            "   |"- [IPFS](https://ipfs.io), ...        "
+                                                       |
+                                                       |
 `````````
 
 
