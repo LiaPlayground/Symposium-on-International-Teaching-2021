@@ -653,26 +653,25 @@ int main() {
 
 
 `````````
-Generierung                    Publikation          Konsum durch Lernende
-
+Generation                     Publication          Usage
 
                                                            .-----------.
-    | Plugin A                                      ╔══════╡ Browser   ╞══════╗ Modes:
+    | LiaScript Plugin A                            ╔══════╡ Browser   ╞══════╗ Modes:
     |  | Plugin B                           native  ║      .-----------.      ║ "+" Textbook
-    v  v                                  +-------> ║ Digitale Systeme        ║ "+" Presentation
-+---------------------+                   |         ║ (WiSe 2020)             ║ "+" Slides
-| # Digitale Systeme  |\          .-,(  ),-.        ╚═════════════════════════╝
-| (WiSe 2020)         +-+      .-(          )-.            .-----------.
-|                       | --> ( Cloud Speicher )    ╔══════╡ LMS       ╞══════╗
-| Fallbeispiele         |      '-(         ).-'     ║      .-----------.      ║
-| + ...                 |         '-.( ).-' SCORM   ║ Digitale Systeme        ║
-+-----------------------+                 +-------> ║ (WiSe 2020)             ║
+    v  v                                  +-------> ║ Digital Systems         ║ "+" Presentation
++---------------------+                   |         ║ (Sprint 2021)           ║ "+" Slides
+| # Digital Systems   |\          .-,(  ),-.        ╚═════════════════════════╝
+| (Sprint 2021)       +-+      .-(          )-.            .-----------.
+|                       | --> (     Cloud      )    ╔══════╡ LMS       ╞══════╗
+|"##"Introduction       |      '-(         ).-'     ║      .-----------.      ║
+| + ...                 |         '-.( ).-' SCORM   ║ Digital Systems         ║
++-----------------------+                 +-------> ║ (Sprint 2021)           ║
                                           |         ╚═════════════════════════╝
                                           |                .-----------.
                                           |         ╔══════╡ pdfViewer ╞══════╗
                                           | export  ║      .-----------.      ║
-                                          +-------> ║ Digitale Systeme        ║
-                                                    ║ (WiSe 2020)             ║
+                                          +-------> ║ Digital Systems         ║
+                                                    ║ (Sprint 2021)           ║
                                                     ╚═════════════════════════╝
 
 "- Atom Editor with LiaScript Extention            "   |"- [Github](https://github.io)         "
