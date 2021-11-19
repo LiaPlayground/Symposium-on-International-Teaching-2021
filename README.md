@@ -146,11 +146,11 @@ Version 1.0                           Version 1.1
 
 **Conditions for implementation:**
 
-+ Freely available editors and tools           
-+ Integrated sharing mechanims      
-+ Automated version management     
-+ Support of interactive content    
-+ Concepts for internationalization   
++ Freely available editors and tools
++ Integrated sharing mechanims
++ Automated version management
++ Support of interactive content
++ Concepts for internationalization
 
 ********************************************************************************
 
@@ -689,6 +689,37 @@ Generation                     Publication          Usage
 | Version management     | ... using git                                 |
 | Interactive content    | ... implements a plugin concept               |
 | Internationalization   | ... automated translation (work in progress ) |
+
+
+### ... Publishing via
+
+
+      {{1}}
+* ### Plattforms with Version-Control:
+
+  1. [GitHub](https://github.com)
+  2. [GitLab](https://gitlab.com)
+  3. ...
+
+      {{2}}
+* ### Peer To Peer Systems with Browser-Support
+
+  1. [Brave-Browser](https://brave.com) with [IPFS](https://ipfs.io)
+  2. [Beaker-Browser](https://beakerbrowser.com) with [Hyper](https://hypercore-protocol.org)
+  3. ...
+
+       {{3}}
+* ### Online stores
+
+  1. [DropBox](https://www.dropbox.com)
+  2. [NextCloud](https://nextcloud.com/)
+  3. ... any ordinary webstore
+
+       {{4}}
+* ### Collaborative online editors ...
+
+  1. [CodiLia](https://github.com/liascript/codilia)
+  2. ...
 
 
 ## Advanced Concepts
