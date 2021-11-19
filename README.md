@@ -3,7 +3,7 @@ author:   André Dietrich & Sebastian Zug
 
 email:    LiaScript@web.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: en
 
@@ -43,6 +43,8 @@ document.getElementById("@0").innerHTML = "<MEC-2 id='test' width=1530 height=68
 -->
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Symposium-on-International-Teaching-2021/main/README.md)
+
+
 
 # Create & Share Interactive online-courses with LiaScript
 
@@ -454,10 +456,10 @@ This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
 
 What is the solution of $y=2x+3$ for $x=5$?
 
-[[X]] 13
-[[ ]] 17
-[[ ]] 3
-[[?]] Replace x by the actual value 5 in the equation.
+    [[X]] 13
+    [[ ]] 17
+    [[ ]] 3
+    [[?]] Replace x by the actual value 5 in the equation.
 ****************************************
 
 This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
@@ -655,30 +657,30 @@ int main() {
 `````````
 Generation                     Publication          Usage
 
-                                                           .-----------.
-    | LiaScript Plugin A                            ╔══════╡ Browser   ╞══════╗ Modes:
-    |  | Plugin B                           native  ║      .-----------.      ║ "+" Textbook
-    v  v                                  +-------> ║ Digital Systems         ║ "+" Presentation
-+---------------------+                   |         ║ (Sprint 2021)           ║ "+" Slides
+                                                           .-----------.           Modes:
+    | LiaScript Plugin A                            ╔══════| Browser   |══════╗
+    |  | Plugin B                           native  ║      '-----------'      ║"- Textbook        "
+    v  v                                  +-------> ║ Digital Systems         ║"- Presentation    "
++---------------------+                   |         ║ (Sprint 2021)           ║"- Slides          "
 | # Digital Systems   |\          .-,(  ),-.        ╚═════════════════════════╝
 | (Sprint 2021)       +-+      .-(          )-.            .-----------.
-|                       | --> (     Cloud      )    ╔══════╡ LMS       ╞══════╗
-|"##"Introduction       |      '-(         ).-'     ║      .-----------.      ║
+|                       | --> (     Cloud      )    ╔══════| LMS       |══════╗
+|"##"Introduction       |      '-(         ).-'     ║      '-----------'      ║
 | + ...                 |         '-.( ).-' SCORM   ║ Digital Systems         ║
 +-----------------------+                 +-------> ║ (Sprint 2021)           ║
                                           |         ╚═════════════════════════╝
                                           |                .-----------.
-                                          |         ╔══════╡ pdfViewer ╞══════╗
-                                          | export  ║      .-----------.      ║
+                                          |         ╔══════| pdfViewer |══════╗
+                                          | export  ║      '-----------'      ║
                                           +-------> ║ Digital Systems         ║
                                                     ║ (Sprint 2021)           ║
                                                     ╚═════════════════════════╝
 
-"- Atom Editor with LiaScript Extention            "   |"- [Github](https://github.io)         "
-"- [CodiLia](https://github.com/liascript/codilia) "   |"- [Dropbox](https://www.dropbox.com)  "
-"  Online Editor @TUBAF                            "   |"- [IPFS](https://ipfs.io), ...        "
-                                                       |
-                                                       |
+"- Atom Editor with LiaScript Extention           "|"- [Github](https://github.io)         "
+"- [CodiLia](https://github.com/liascript/codilia)"|"- [Dropbox](https://www.dropbox.com)  "
+"  Online Editor @TUBAF                           "|"- [IPFS](https://ipfs.io), ...        "
+                                                   |
+                                                   |
 `````````
 
  {{1}}
@@ -691,9 +693,74 @@ Generation                     Publication          Usage
 | Internationalization   | ... automated translation (work in progress ) |
 
 
+### ... Sharing via
+
+
+                --{{0}}--
+So how can you share your course with others? Actually you can put your course
+anywhere. The only thing that is required is the URL to your Markdown document.
+
+                 {{0-1}}
+`https://liascript.github.io/course/?YOUR_COURSE_URL.md`
+
+
+    --{{1}}--
+In order to have a strict version-control with support for multiple authors,
+versions, branches, etc. You can use any kind of online plattform like GitHub or
+GitLab, but also others.
+
+      {{1}}
+* ### Plattforms with Version-Control:
+
+  1. [GitHub](https://github.com)
+  2. [GitLab](https://gitlab.com)
+  3. ...
+
+
+    --{{2}}--
+The Internet was a peer to peer system from its very beginning, but now also
+multiple projects catch on upon this idea, by integreating such features also
+directly into the browser, which allows to share content and entire websites
+directly from your local computer.
+
+
+      {{2}}
+* ### Peer To Peer Systems with Browser-Support
+
+  1. [Brave-Browser](https://brave.com) with [IPFS](https://ipfs.io)
+  2. [Beaker-Browser](https://beakerbrowser.com) with [Hyper](https://hypercore-protocol.org)
+  3. ...
+
+
+    --{{3}}--
+And of course, you can upload your course documents to any ordinary webstore.
+
+
+      {{3}}
+* ### Online stores
+
+  1. [DropBox](https://www.dropbox.com)
+  2. [NextCloud](https://nextcloud.com/)
+  3. ... any ordinary webstore
+
+
+
+     --{{4}}--
+Or, directly share and edit it with others in a collaborative online editor,
+such as CodiMD or in our case CodiLia.
+
+       {{4}}
+* ### Collaborative online editors ...
+
+  1. [CodiLia](https://github.com/liascript/codilia)
+  2. ...
+
+
 ## Advanced Concepts
 
-> Puhhh ... a lot of information for 20min! Please take a closer view to our examples and documentations for diving in LiaScript.
+         --{{0}}--
+Puhhh ... a lot of information for 20 minutes! Please take a closer view to our
+examples and documentations for diving deeper into LiaScript.
 
 * __Project-Website:__ https://LiaScript.github.io
 * __Open-Source:__ https://github.com/liascript
@@ -716,11 +783,28 @@ Generation                     Publication          Usage
 
 ## Save the date
 
-> We plan to dive into LiaScript in detail during a online-tutorial in December.
+                            --{{0}}--
+We plan to dive into LiaScript in detail during a online-tutorial in December.
 
-https://teach.informatik.tu-freiberg.de/b/seb-p67-jav-pw9
 
-**Donnerstag, 9 Dezember, 19 Uhr**
+1. **When?**  **Thursday, December 9th, 7pm**
+2. **Where?** https://teach.informatik.tu-freiberg.de/b/seb-p67-jav-pw9
+3. **[Add to your calender](./workshop.ics)**
 
-{{1}}
-> **Thanks for your attention**
+              {{1}}
+<div style="width:100%;height:0;padding-bottom:87%;position:relative;"><iframe src="https://giphy.com/embed/13qctMBrrgbwJi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/video-games-game-mario-13qctMBrrgbwJi">via GIPHY</a></p>
+
+
+## Version History
+
+* `0.0.1`
+
+  [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.1/README.md)
+
+  https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.1/README.md
+
+* `0.0.2`
+
+  [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.2/README.md)
+
+  https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.2/README.md
