@@ -3,7 +3,7 @@ author:   André Dietrich & Sebastian Zug
 
 email:    LiaScript@web.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: en
 
@@ -43,6 +43,8 @@ document.getElementById("@0").innerHTML = "<MEC-2 id='test' width=1530 height=68
 -->
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Symposium-on-International-Teaching-2021/main/README.md)
+
+
 
 # Create & Share Interactive online-courses with LiaScript
 
