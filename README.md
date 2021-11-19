@@ -46,25 +46,22 @@ document.getElementById("@0").innerHTML = "<MEC-2 id='test' width=1530 height=68
 
 # Create & Share Interactive online-courses with LiaScript
 
+{{0-1}}
+![Wikipedia](./pic/Title.png)
+
                               {{0-2}}
 ************************************
-
-![Wikipedia](./pic/Title.png)
 
 > ##### Symposium Internationale Lehre, Technische Universität Braunschweig, 19.11.2021
 >
 > **André Dietrich, Sebastian Zug**
 >
-> -- _This material was designed with LiaScript and is available by the [Link](https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021)_
+>  _This material was designed with LiaScript and is available by the [Link](https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021)_
 
 ************************************
 
                              --{{1}}--
-These are Sebastian and André your hosts of the today's session about creating
-and sharing online-courses with LiaScript. If you want to, you can try out
-different presentation styles by switching them within the settings. Or, if you
-want this course to be served within another language, try out the experimental
-google-translation.
+These are Sebastian and André your hosts of the today's session about creating and sharing online-courses with LiaScript. If you want to, you can try out different presentation styles by switching them within the settings. Additionally, if you want this course to be served within another language, try out the experimental google-translation.
 
                               {{1-2}}
 <div style="display: flex; flex-wrap: wrap; gap: 12px;">
@@ -108,12 +105,11 @@ How should teaching materials be created that really deserve the OER idea? They
 should be freely available AND manipulable. Some protagonists of the community
 emphasize the first aspect and annotate a PDF document as open. But courses on a
 topic are very different, a teacher sets varying priorities or chooses another
-contexts. Hence, a complete adoption is not enough. Furthermore, it is necessary
+contexts. Hence, the offer of a usage is not enough. Furthermore, it is necessary
 to provide materials that can be revised and newly compiled. The Figure
 illustrates this. A number of authors corrected errors and developed content
 that goes into different directions. This also results in completely new course
-configurations or translations of content. What other platform for a successful
-multi-editor knowledge collections could be used as an inspiring example?
+configurations or translations of content. But which basic expectations have to be implemented to meet this goal?
 
 
 ```ascii   *Versions of the content of a course and their reuse in other contexts*
@@ -148,13 +144,13 @@ Version 1.0                           Version 1.1
 ---
 
 
-| Expectations and goals | Purpose                                                  |
-| ---------------------- | -------------------------------------------------------- |
-| Editor tools           | Creation and manipulation Software                       |
-| Sharing mechanims      | Transfer materials between teachers                      |
-| Version management     | Overview on existing versions and adaptations            |
-| Interactive content    | Specific teaching materials for broad spectrum of topics |
-| Internationalization   | Transfer between languages                               |
+**Conditions for implementation:**
+
++ Freely available editors and tools           
++ Integrated sharing mechanims      
++ Automated version management     
++ Support of interactive content    
++ Concepts for internationalization   
 
 ********************************************************************************
 
@@ -163,9 +159,9 @@ Version 1.0                           Version 1.1
 ********************************************************************************
 
     --{{1}}--
-Would it be possible to implement this idea by common slides (Office, OpenOffice)?
+Would it be possible to implement this idea in standard slide formats? I guess you can answer this question by yourself if you tested the integrated version management in PowerPoint for instance. Of course, the sharing mechanisms are easy to realize by just copying a file, but you have no control or overview about new versions provided by another lecturer. Additionally, the capabilities to provide interactive content are very limited.
 
-![PowerPoint slide example](./pic/Powerpoint.png "Examplary Powerpoint slide")
+![PowerPoint slide example from the hosts](./pic/Powerpoint.png "Examplary Powerpoint slide")
 
 ---
 
@@ -189,10 +185,10 @@ Would it be possible to implement this idea by common slides (Office, OpenOffice
 ![Wikipedia](./pic/HistoryWikipedia.png "Wikipedia Version history of _Federal Republic of Germany_")
 
     --{{2}}--
-The German entry for "Federal Republic of Germany" looked back on 15850 changes
+Wikipedia has a different approach that is much closer to the OER idea. The German entry for "Federal Republic of Germany" looked back on 15850 changes
 in May 2019. 3928 users have contributed to this. Wikipedia thus ensures the
 timeliness and quality of the data stock. But where is the key to success?
-Wikipedia stores the entire history of a document. This makes it possible to reconstruct changes, to merge versions, and thus, to eliminate errors very easy.
+Wikipedia stores the entire history of a document. This makes it possible to reconstruct changes, to merge versions, and thus, to discuss or eliminate errors very easy.
 
 ---
 
@@ -210,7 +206,7 @@ Wikipedia stores the entire history of a document. This makes it possible to rec
 > Wikipedia provides an integrated editor directly connected with the version system!
 
      --{{3}}--
-The content in Wikipedia are edited in a simple description language [wikitext](https://de.wikipedia.org/wiki/Wikitext). Unlike Word or PDF documents, these are simple text files that can be manipulated in the browser by anyone. Users can make changes in the description language directly within the browser. No separate tool and installation is necessary.
+The content in Wikipedia is edited in a simple description language, [wikitext](https://de.wikipedia.org/wiki/Wikitext). The syntax combines specific symbols for defining titles, paragraphs, and images with the actual content. Unlike Word or PDF documents, a wikitext is a simple text file. Users can make changes in the description language directly within the browser. No separate tool and installation are necessary. LiaScript was motivated by this idea but combines the concept with requierments of an Learning managment system.
 
 
 ## LiaScript - Basic Concepts
@@ -686,7 +682,6 @@ Generierung                    Publikation          Konsum durch Lernende
                                                        |
 `````````
 
-
  {{1}}
 | Expectations and goals | Methods                                       |
 | ---------------------- | --------------------------------------------- |
@@ -720,18 +715,13 @@ Generierung                    Publikation          Konsum durch Lernende
 * __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
 
 
-## User stories
-
-![Konflikt](https://raw.githubusercontent.com/liaScript/Workshop/master/img/GitScreenShot.png)<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-
-> The text based representation of tables, diagrams, formulars allows students to contribute to the material directly.
-
 ## Save the date
 
+> We plan to dive into LiaScript in detail during a online-tutorial in December.
 
-Ankündigung Tutorial - Hinweis auf die OEB?
+https://teach.informatik.tu-freiberg.de/b/seb-p67-jav-pw9
 
+**Donnerstag, 9 Dezember, 19 Uhr**
 
+{{1}}
 > **Thanks for your attention**
