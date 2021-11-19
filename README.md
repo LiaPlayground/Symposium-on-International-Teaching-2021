@@ -147,7 +147,7 @@ Version 1.0                           Version 1.1
 **Conditions for implementation:**
 
 + Freely available editors and tools           
-+ Integrated sharing mechanims      
++ Integrated sharing mechanisms      
 + Automated version management     
 + Support of interactive content    
 + Concepts for internationalization   
