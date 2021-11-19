@@ -454,10 +454,10 @@ This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
 
 What is the solution of $y=2x+3$ for $x=5$?
 
-[[X]] 13
-[[ ]] 17
-[[ ]] 3
-[[?]] Replace x by the actual value 5 in the equation.
+    [[X]] 13
+    [[ ]] 17
+    [[ ]] 3
+    [[?]] Replace x by the actual value 5 in the equation.
 ****************************************
 
 This is the explanation ... $ y(5) = 2x+3 = 2\cdot 5 + 3 = 10 $
@@ -655,30 +655,30 @@ int main() {
 `````````
 Generation                     Publication          Usage
 
-                                                           .-----------.
-    | LiaScript Plugin A                            ╔══════╡ Browser   ╞══════╗ Modes:
-    |  | Plugin B                           native  ║      .-----------.      ║ "+" Textbook
-    v  v                                  +-------> ║ Digital Systems         ║ "+" Presentation
-+---------------------+                   |         ║ (Sprint 2021)           ║ "+" Slides
+                                                           .-----------.           Modes:
+    | LiaScript Plugin A                            ╔══════| Browser   |══════╗
+    |  | Plugin B                           native  ║      '-----------'      ║"- Textbook        "
+    v  v                                  +-------> ║ Digital Systems         ║"- Presentation    "
++---------------------+                   |         ║ (Sprint 2021)           ║"- Slides          "
 | # Digital Systems   |\          .-,(  ),-.        ╚═════════════════════════╝
 | (Sprint 2021)       +-+      .-(          )-.            .-----------.
-|                       | --> (     Cloud      )    ╔══════╡ LMS       ╞══════╗
-|"##"Introduction       |      '-(         ).-'     ║      .-----------.      ║
+|                       | --> (     Cloud      )    ╔══════| LMS       |══════╗
+|"##"Introduction       |      '-(         ).-'     ║      '-----------'      ║
 | + ...                 |         '-.( ).-' SCORM   ║ Digital Systems         ║
 +-----------------------+                 +-------> ║ (Sprint 2021)           ║
                                           |         ╚═════════════════════════╝
                                           |                .-----------.
-                                          |         ╔══════╡ pdfViewer ╞══════╗
-                                          | export  ║      .-----------.      ║
+                                          |         ╔══════| pdfViewer |══════╗
+                                          | export  ║      '-----------'      ║
                                           +-------> ║ Digital Systems         ║
                                                     ║ (Sprint 2021)           ║
                                                     ╚═════════════════════════╝
 
-"- Atom Editor with LiaScript Extention            "   |"- [Github](https://github.io)         "
-"- [CodiLia](https://github.com/liascript/codilia) "   |"- [Dropbox](https://www.dropbox.com)  "
-"  Online Editor @TUBAF                            "   |"- [IPFS](https://ipfs.io), ...        "
-                                                       |
-                                                       |
+"- Atom Editor with LiaScript Extention           "|"- [Github](https://github.io)         "
+"- [CodiLia](https://github.com/liascript/codilia)"|"- [Dropbox](https://www.dropbox.com)  "
+"  Online Editor @TUBAF                           "|"- [IPFS](https://ipfs.io), ...        "
+                                                   |
+                                                   |
 `````````
 
  {{1}}
@@ -691,8 +691,21 @@ Generation                     Publication          Usage
 | Internationalization   | ... automated translation (work in progress ) |
 
 
-### ... Publishing via
+### ... Sharing via
 
+
+                --{{0}}--
+So how can you share your course with others? Actually you can put your course
+anywhere. The only thing that is required is the URL to your Markdown document.
+
+                 {{0-1}}
+`https://liascript.github.io/course/?YOUR_COURSE_URL.md`
+
+
+    --{{1}}--
+In order to have a strict version-control with support for multiple authors,
+versions, branches, etc. You can use any kind of online plattform like GitHub or
+GitLab, but also others.
 
       {{1}}
 * ### Plattforms with Version-Control:
@@ -701,6 +714,14 @@ Generation                     Publication          Usage
   2. [GitLab](https://gitlab.com)
   3. ...
 
+
+    --{{2}}--
+The Internet was a peer to peer system from its very beginning, but now also
+multiple projects catch on upon this idea, by integreating such features also
+directly into the browser, which allows to share content and entire websites
+directly from your local computer.
+
+
       {{2}}
 * ### Peer To Peer Systems with Browser-Support
 
@@ -708,12 +729,23 @@ Generation                     Publication          Usage
   2. [Beaker-Browser](https://beakerbrowser.com) with [Hyper](https://hypercore-protocol.org)
   3. ...
 
-       {{3}}
+
+    --{{3}}--
+And of course, you can upload your course documents to any ordinary webstore.
+
+
+      {{3}}
 * ### Online stores
 
   1. [DropBox](https://www.dropbox.com)
   2. [NextCloud](https://nextcloud.com/)
   3. ... any ordinary webstore
+
+
+
+     --{{4}}--
+Or, directly share and edit it with others in a collaborative online editor,
+such as CodiMD or in our case CodiLia.
 
        {{4}}
 * ### Collaborative online editors ...
@@ -724,7 +756,9 @@ Generation                     Publication          Usage
 
 ## Advanced Concepts
 
-> Puhhh ... a lot of information for 20min! Please take a closer view to our examples and documentations for diving in LiaScript.
+         --{{0}}--
+Puhhh ... a lot of information for 20 minutes! Please take a closer view to our
+examples and documentations for diving deeper into LiaScript.
 
 * __Project-Website:__ https://LiaScript.github.io
 * __Open-Source:__ https://github.com/liascript
