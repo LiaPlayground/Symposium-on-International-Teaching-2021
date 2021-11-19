@@ -793,3 +793,18 @@ We plan to dive into LiaScript in detail during a online-tutorial in December.
 
               {{1}}
 <div style="width:100%;height:0;padding-bottom:87%;position:relative;"><iframe src="https://giphy.com/embed/13qctMBrrgbwJi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/video-games-game-mario-13qctMBrrgbwJi">via GIPHY</a></p>
+
+
+## Version History
+
+* `0.0.1`
+
+  [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.1/README.md)
+
+  https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.1/README.md
+
+* `0.0.2`
+
+  [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.2/README.md)
+
+  https://github.com/LiaPlayground/Symposium-on-International-Teaching-2021/blob/0.0.2/README.md
