@@ -781,11 +781,13 @@ examples and documentations for diving deeper into LiaScript.
 
 ## Save the date
 
-> We plan to dive into LiaScript in detail during a online-tutorial in December.
+                            --{{0}}--
+We plan to dive into LiaScript in detail during a online-tutorial in December.
 
-https://teach.informatik.tu-freiberg.de/b/seb-p67-jav-pw9
 
-**Donnerstag, 9 Dezember, 19 Uhr**
+1. **When?**  **Thursday, December 9th, 7pm**
+2. **Where?** https://teach.informatik.tu-freiberg.de/b/seb-p67-jav-pw9
+3. **[Add to your calender](./workshop.ics)**
 
-{{1}}
-> **Thanks for your attention**
+              {{1}}
+<div style="width:100%;height:0;padding-bottom:87%;position:relative;"><iframe src="https://giphy.com/embed/13qctMBrrgbwJi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/video-games-game-mario-13qctMBrrgbwJi">via GIPHY</a></p>
